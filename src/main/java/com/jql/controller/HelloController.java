@@ -3,7 +3,8 @@ package com.jql.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.jql.entity.User;
-import com.jql.mapper.UserMapper;
+import com.jql.mapper1.UserMapper1;
+import com.jql.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,9 @@ import java.util.Map;
 @EnableAutoConfiguration
 public class HelloController {
     @Autowired
-    private UserMapper userMapper;
+    private UserMapper1 userMapper;
+    @Autowired
+    private UserService userService;
     @RequestMapping("/hello")
     @ResponseBody
     public String hello(){
@@ -53,5 +56,13 @@ public class HelloController {
         return page;
     }
 
+    @RequestMapping("/addUser2")
+    @ResponseBody
+    public String addUser2(String name,Integer age){
+        User u = new User();
+        u.setName(name);
+        u.setAge(age);
+        return ""+userService.addUser(u);
+    }
 
 }
