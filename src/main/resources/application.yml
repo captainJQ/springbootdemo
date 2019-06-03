@@ -1,0 +1,29 @@
+mybatis:
+    mapper-locations: classpath:/mapping/*.xml
+    type-aliases-package: com.jql.mapper
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://localhost:3306/testdemo
+        username: root
+        type: com.alibaba.druid.pool.DruidDataSource
+    freemarker:
+        alow-request-override: false
+        cache: true
+        charset: UTF-8
+        check-template-location: true
+        content-type: text/html
+        suffix: .ftl
+        template-loader-path: classpath:/templates/
+pagehelper:
+    helper-dialect: mysql
+    reasonable: true
+    support-methods-arguments: true
+    params: countSql
+    page-size-zero: true
+logging:
+    level:
+        com:
+            jql:
+                mapper: DEBUG
