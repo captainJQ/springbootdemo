@@ -3,18 +3,26 @@ mybatis:
     type-aliases-package: com.jql.mapper1
 spring:
     datasource:
+#        ds1:
+#            driver-class-name: com.mysql.jdbc.Driver
+#            password: 123456
+#            jdbc-url: jdbc:mysql://localhost:3306/testdemo
+#            username: root
+#            type: com.alibaba.druid.pool.DruidDataSource
+#        ds2:
+#            driver-class-name: com.mysql.jdbc.Driver
+#            password: 123456
+#            jdbc-url: jdbc:mysql://localhost:3306/testdemo2
+#            username: root
+#            type: com.alibaba.druid.pool.DruidDataSource
         ds1:
-            driver-class-name: com.mysql.jdbc.Driver
             password: 123456
-            jdbc-url: jdbc:mysql://localhost:3306/testdemo
+            url: jdbc:mysql://localhost:3306/testdemo
             username: root
-            type: com.alibaba.druid.pool.DruidDataSource
         ds2:
-            driver-class-name: com.mysql.jdbc.Driver
             password: 123456
-            jdbc-url: jdbc:mysql://localhost:3306/testdemo2
+            url: jdbc:mysql://localhost:3306/testdemo2
             username: root
-            type: com.alibaba.druid.pool.DruidDataSource
     freemarker:
         alow-request-override: false
         cache: true
