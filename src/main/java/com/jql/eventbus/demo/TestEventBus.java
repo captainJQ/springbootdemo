@@ -12,5 +12,14 @@ public class TestEventBus {
         eventBus.post(new TestEvent("hashiqi"));
         eventBus.post(new TestEvent("shoushou"));
         eventBus.post(new TestEvent("mad word"));
+        System.out.println("<----------------->");
+        eventBus.post(new TestEvent1("mad word"));
+        eventBus.post(new TestEvent1("mad word"));
+        eventBus.post(new TestEvent1("mad word"));
+        System.out.println("<----------------->");
+        eventBus.post(new TestEvent2("mad word"));
+        eventBus.post(new TestEvent2("mad word"));
+        eventBus.post(new TestEvent2("mad word"));
+        eventBus.post(new TestEvent2("mad word"));
     }
 }
