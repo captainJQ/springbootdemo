@@ -31,7 +31,5 @@ public class Registry {
         System.out.println(hashSet.getClass());
         System.out.println(hashMap.getClass());
         System.out.println("--------------------------");
-        System.out.println(false||false&&true);
-        System.out.println(true|false&false);
     }
 }

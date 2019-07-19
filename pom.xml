@@ -97,6 +97,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+        <!-- 引入公共API,以实现其接口 -->
+<!--        <dependency>
+            <groupId>com.zang</groupId>
+            <artifactId>gmall-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>-->
+        <!-- 引入spring-boot-starter以及dubbo和curator的依赖 -->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

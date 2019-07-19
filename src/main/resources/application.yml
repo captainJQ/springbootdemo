@@ -68,3 +68,13 @@ swagger:
                     - name: token
                       description: Access Token
                       param-type: header
+dubbo:
+  application:
+    name: spring-boot-dubbo-service
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+
