@@ -1,8 +1,8 @@
-mybatis:
-    mapper-locations: classpath:/mapping/*.xml
-    type-aliases-package: com.jql.mapper1
+#mybatis:
+#    mapper-locations: classpath:/mapping/*.xml
+#    type-aliases-package: com.jql.mapper1
 spring:
-    datasource:
+#    datasource:
 #        ds1:
 #            driver-class-name: com.mysql.jdbc.Driver
 #            password: 123456
@@ -15,30 +15,56 @@ spring:
 #            jdbc-url: jdbc:mysql://localhost:3306/testdemo2
 #            username: root
 #            type: com.alibaba.druid.pool.DruidDataSource
-        ds1:
-            password: 123456
-            url: jdbc:mysql://localhost:3306/testdemo
-            username: root
-        ds2:
-            password: 123456
-            url: jdbc:mysql://localhost:3306/testdemo2
-            username: root
-    freemarker:
-        alow-request-override: false
-        cache: true
-        charset: UTF-8
-        check-template-location: true
-        content-type: text/html
-        suffix: .ftl
-        template-loader-path: classpath:/templates/
-pagehelper:
-    helper-dialect: mysql
-    reasonable: true
-    support-methods-arguments: true
-    params: countSql
-    page-size-zero: true
+
+#        ds1:
+#            password: 123456
+#            url: jdbc:mysql://localhost:3306/testdemo
+#            username: root
+#        ds2:
+#            password: 123456
+#            url: jdbc:mysql://localhost:3306/testdemo2
+#            username: root
+#    freemarker:
+#        alow-request-override: false
+#        cache: true
+#        charset: UTF-8
+#        check-template-location: true
+#        content-type: text/html
+#        suffix: .ftl
+#        template-loader-path: classpath:/templates/
+  thymeleaf:
+    #设置为false表示没有缓存
+    cache: false
+    #设置读取html的路径
+    prefix: classpath:/static/
+    #回避HTML进行严格的检查的配置，需要提前引入nekohtml依赖。
+    mode: LEGACYHTML5
+
+#pagehelper:
+#    helper-dialect: mysql
+#    reasonable: true
+#    support-methods-arguments: true
+#    params: countSql
+#    page-size-zero: true
 logging:
     level:
         com:
             jql:
                 mapper: DEBUG
+#swagger配置
+swagger:
+    print-init: true
+    enabled: true
+    security-configuration:
+        dockets:
+            docket-api:
+                base-package: com.jql.controller
+                group-name: api
+                api-info:
+                    title: 要展示的接口名称
+                    description: RESTful接口描述
+                    version:版本号 license: 版权
+                global-parameters:
+                    - name: token
+                      description: Access Token
+                      param-type: header

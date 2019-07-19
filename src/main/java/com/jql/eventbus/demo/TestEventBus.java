@@ -3,6 +3,7 @@ package com.jql.eventbus.demo;
 import com.google.common.eventbus.EventBus;
 
 public class TestEventBus {
+
     public static void main(String[] args) {
 /*        EventBus eventBus = new EventBus();
         eventBus.register(new TestListener());*/
@@ -21,5 +22,6 @@ public class TestEventBus {
         eventBus.post(new TestEvent2("mad word"));
         eventBus.post(new TestEvent2("mad word"));
         eventBus.post(new TestEvent2("mad word"));
+
     }
 }
