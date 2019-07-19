@@ -9,5 +9,13 @@
     <p th:text="${name}"></p>
     <p th:text="${company}"></p>
     <p th:text="${age}"></p>
+    <p>
+
+    </p>
+    <ul >
+        <li th:each="user: ${users}">
+            <p th:text="*{id}+'-->'+*{name}+'-->'+*{age}"></p>
+        </li>
+    </ul>
 </body>
 </html>
