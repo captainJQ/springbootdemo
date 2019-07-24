@@ -1,8 +1,8 @@
-#mybatis:
-#    mapper-locations: classpath:/mapping/*.xml
-#    type-aliases-package: com.jql.mapper1
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.jql.mapper1
 spring:
-#    datasource:
+  datasource:
 #        ds1:
 #            driver-class-name: com.mysql.jdbc.Driver
 #            password: 123456
@@ -16,14 +16,14 @@ spring:
 #            username: root
 #            type: com.alibaba.druid.pool.DruidDataSource
 
-#        ds1:
-#            password: 123456
-#            url: jdbc:mysql://localhost:3306/testdemo
-#            username: root
-#        ds2:
-#            password: 123456
-#            url: jdbc:mysql://localhost:3306/testdemo2
-#            username: root
+    ds1:
+      password: root
+      url: jdbc:mysql://localhost:3306/testdemo
+      username: root
+    ds2:
+      password: root
+      url: jdbc:mysql://localhost:3306/testdemo2
+      username: root
 #    freemarker:
 #        alow-request-override: false
 #        cache: true
@@ -40,12 +40,12 @@ spring:
     #回避HTML进行严格的检查的配置，需要提前引入nekohtml依赖。
     mode: LEGACYHTML5
 
-#pagehelper:
-#    helper-dialect: mysql
-#    reasonable: true
-#    support-methods-arguments: true
-#    params: countSql
-#    page-size-zero: true
+pagehelper:
+    helper-dialect: mysql
+    reasonable: true
+    support-methods-arguments: true
+    params: countSql
+    page-size-zero: true
 logging:
     level:
         com:
@@ -68,13 +68,13 @@ swagger:
                     - name: token
                       description: Access Token
                       param-type: header
-dubbo:
-  application:
-    name: spring-boot-dubbo-service
-  registry:
-    protocol: zookeeper
-    address: 127.0.0.1:2181
-  protocol:
-    name: dubbo
-    port: 20880
+#dubbo:
+#  application:
+#    name: spring-boot-dubbo-service
+#  registry:
+#    protocol: zookeeper
+#    address: 127.0.0.1:2181
+#  protocol:
+#    name: dubbo
+#    port: 20880
 
